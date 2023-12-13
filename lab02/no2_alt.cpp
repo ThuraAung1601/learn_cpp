@@ -31,8 +31,8 @@ class GuessNumberGame {
         }
 
     void play() {
-        int guess; bool checker = false; int i = 0;
-        while (true) {
+        int guess; bool checker = false; int i = 1;
+        while (i < 10) {
                 cout << "Enter a guess between 0 and 100: "; cin >> guess;
                 if (guess < randomNumber) {
                     cout << "Guess is smaller than the number." << endl;
@@ -45,10 +45,7 @@ class GuessNumberGame {
                     break;
                 }
                 i++;
-                if (i == 10) {
-                    cout << "Sorry. You lose the game to guess " << randomNumber << endl;
-                    break;
-                }
+                cout << "Sorry. You lose the game to guess " << randomNumber << endl;
         }
     }
 };
