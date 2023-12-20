@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<string>
 #include<algorithm>
 
 using namespace std;
@@ -73,7 +74,7 @@ class Inventory {
             cout << "There is no book";
         }
         for (int i = 0; i < books.size(); ++i) {
-            cout <<  "Book No. " + to_string(i)
+            cout <<  "Book No." + to_string(i+1)
                     + "\nTitle: " + books[i].get_title() 
                     + "\nAuthor: " + books[i].get_author()
                     + "\nQuantity: " + to_string(books[i].get_quantity());
@@ -90,11 +91,17 @@ int main() {
     while (true) {
         cout << "Enter command (a: add, s: search, l: list, q: quit): "; 
         cin >> ch;
-
+        cin.ignore();
         if (ch == 'a') {
-            cout << "Enter title: "; cin >> title;
-            cout << "Enter author: "; cin >> author;
-            cout << "Enter quantity: "; cin >> quantity;
+            cout << "Enter title: "; 
+            getline(cin, title);
+            // cin >> title;
+            cout << "Enter author: "; 
+            // cin >> author;
+            getline(cin, author);
+            cout << "Enter quantity: "; 
+            cin >> quantity; cin.ignore();
+            // getline(cin, quantity);
             myBook.set_title(title); 
             myBook.set_author(author); 
             myBook.set_quantity(quantity);
@@ -102,7 +109,8 @@ int main() {
         }
         else if (ch == 's') {
             cout << "Enter title of the book to search: "; 
-            cin >> title;
+            // cin >> title;
+            getline(cin, title);
             string result = bookList.findBook(title);
             cout << result << endl; // Display search result
         }
