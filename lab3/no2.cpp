@@ -101,7 +101,7 @@ int main() {
     Inventory bookList;
 
     while (true) {
-        cout << "Enter command (a: add, s: search, l: list, q: quit): "; 
+        cout << "Enter command (a: add, s: search, l: list,  r: remove, q: quit): "; 
         cin >> ch;
         cin.ignore();
         if (ch == 'a') {
