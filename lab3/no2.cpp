@@ -82,9 +82,18 @@ class Inventory {
     }
 };
 
+bool isNumber(string num) {
+    for (int i = 0; i < num.size(); i++) {
+        if (!(isdigit(num[i]))) {
+            return false;
+        }
+    }
+    return true;
+}
+
 int main() {
     char ch;
-    string title, author; int quantity;
+    string title, author; string quantity_temp;
     Book myBook; 
     Inventory bookList;
 
@@ -99,9 +108,19 @@ int main() {
             cout << "Enter author: "; 
             // cin >> author;
             getline(cin, author);
-            cout << "Enter quantity: "; 
-            cin >> quantity; cin.ignore();
-            // getline(cin, quantity);
+            int quantity; // default is zero
+            while (true) {
+                cout << "Enter quantity: "; 
+                // cin >> quantity; cin.ignore();
+                getline(cin, quantity_temp);
+                if (isNumber(quantity_temp)) {
+                    quantity = stoi(quantity_temp);
+                    break;
+                }
+                else {
+                    cout << "ReType quantity !!!" << endl;
+                }
+            }
             myBook.set_title(title); 
             myBook.set_author(author); 
             myBook.set_quantity(quantity);
