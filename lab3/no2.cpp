@@ -45,6 +45,9 @@ class Inventory {
     }
 
     vector<Book> removeBook(string removeTitle) {
+        if (books.empty()) {
+            cout << "There is no book" << endl;
+        }
         for(int i = 0; i < books.size(); ++i) {
             if (books[i].get_title() == removeTitle) {
                 books.erase(books.begin() + i);
@@ -71,7 +74,7 @@ class Inventory {
 
     void printInventory() {
         if (books.empty()) {
-            cout << "There is no book";
+            cout << "There is no book" << endl;
         }
         for (int i = 0; i < books.size(); ++i) {
             cout <<  "Book No." + to_string(i+1)
