@@ -136,6 +136,12 @@ int main() {
         else if (ch == 'l') {
             bookList.printInventory();
         }
+        else if (ch == 'r') {
+            cout << "Enter title of the book to remove: "; 
+            // cin >> title;
+            getline(cin, title);
+            bookList.removeBook(title);
+        }
         else if (ch == 'q') {
             break;
         }
