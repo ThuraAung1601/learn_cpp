@@ -60,7 +60,7 @@ class Inventory {
             if (books[i].get_title() == findTitle) {
                 return "Title: " + books[i].get_title() 
                         + ", Author: " + books[i].get_author()
-                        + ", Quantity: " + to_string(books[i].get_quantity());
+                        + ", Quantity: " + to_string(books[i].get_quantity()) + "\n";
             }
             else {
                 continue;
