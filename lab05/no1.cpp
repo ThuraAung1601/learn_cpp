@@ -1,6 +1,3 @@
-// no1
-// Thura Aung
-
 #include<iostream>
 #include<string>
 using namespace std;
@@ -28,13 +25,16 @@ class HeartRateMonitor {
                     maxDaysInMonth = 28;
                 }
 
+                // Check day and month and reset it to default value 1 if invalid
                 if (info.birth_date.day >= 1 && info.birth_date.day <= maxDaysInMonth) {
                     personal = info;
                 } else {
-                    cout << "Invalid day for the specified month!" << endl;
+                    info.birth_date.day = 1;
+                    personal = info;
                 }
             } else {
-                cout << "Invalid month!" << endl;
+                info.birth_date.month = 1;
+                personal = info;
             }
             // fixed value
             current.year = 2023;
