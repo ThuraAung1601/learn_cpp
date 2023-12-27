@@ -1,3 +1,6 @@
+// no1
+// Thura Aung
+
 #include<iostream>
 #include<string>
 using namespace std;
