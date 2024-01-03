@@ -19,17 +19,16 @@ int main() {
 //         return a + mystery(a, b-1);
 //     }
 // }
-
 int mystery(int a, int b) {
     if (b == 1) {
         return a;
     } else if (b == 0) {
         return 0;
     } else if (b < 0) {
-        b = abs(b);
-        a = -a;
-        return a + mystery(a, b-1); 
-    } 
+        throw invalid_argument("Invalid second integer!!!");
+        //cout << "Invalid second integer!!!";
+        //return 1;
+    }
     else {
         // it just muliply a with b
         // - at each call a is added to a and go on 
