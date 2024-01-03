@@ -19,6 +19,7 @@ int main() {
 //         return a + mystery(a, b-1);
 //     }
 // }
+
 int mystery(int a, int b) {
     if (b == 1) {
         return a;
