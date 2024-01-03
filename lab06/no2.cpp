@@ -55,7 +55,7 @@ int main() {
     };
 
     int counter = 0; int score = 0;
-    int total_number_of_questions = 5;
+    int total_number_of_questions = sizeof(questions)/ sizeof(questions[0]);
     cout << total_number_of_questions;
     while (counter <= total_number_of_questions-1) {
         questions[counter].displayQuestion(counter);
