@@ -15,7 +15,7 @@ class QuizQuestion {
         } 
     
     void displayQuestion(int counter) {
-        cout << "Question " << counter+1 << " :" << question << endl;
+        cout << "Question " << counter+1 << ": " << question << endl;
         cout << "a)" << choices[0] << endl;
         cout << "b)" << choices[1] << endl;
         cout << "c)" << choices[2] << endl;
@@ -70,6 +70,6 @@ int main() {
         }
         counter++;
     }
-    cout << "Your total score is " << score << endl;
+    cout << "Your total score is " << score << "/" << total_number_of_questions << endl;
     return 0;
 }
