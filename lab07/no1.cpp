@@ -1,4 +1,4 @@
-// Author: Yaenin Saema
+// Author: Yaenin Saema, Nay Chi Shunn Lei
 
 #include<iostream>
 #include<limits>
