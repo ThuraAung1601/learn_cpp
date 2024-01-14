@@ -1,6 +1,6 @@
 ## Table of Content
 - [Lecture 1](#Lecture-1-Introduction)
-- [Lecture 2](#Lecture-2-Introduction)
+- [Lecture 2](#Lecture-2-Cpp-Structure)
 
 ## Lecture 1 Introduction
 
@@ -152,4 +152,4 @@ Output is ...
 - noboolalpha
 - uppercase
   
-## Lecture 2 Introduction
+## Lecture 2 Cpp Structure
