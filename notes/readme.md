@@ -255,3 +255,48 @@ Output is ...
 | Pointer Ownership        | No ownership semantics. | Ownership can be transferred or managed explicitly. |
 | Use in Arrays            | Cannot be used to iterate through an array. | Can be used with pointer arithmetic to iterate through an array. |
 
+### For Looping
+```
+  for (int i=0; i<5; i++) {
+  }
+  // looping a container or sequence 
+  // auto keyword can also be used
+  for (int i: v1) {
+  }
+```
+
+## Lecture 3 Intro to Class
+- Computer Organization
+  - Input Unit
+  - Output Unit
+  - Memory Unit
+  - ALU
+  - CPU
+  - Secondary storage unit
+
+- Programming languages
+  - Machine languages
+  - Assembly
+  - High-level
+  - Interpret and Compile languages
+
+- OOP
+  - Functions, member functions (methods in class)
+  - Class
+  - Attributes and data members (private, protected, public)
+    - Private: Only within class the attributes declared
+    - Protected: Only within and its child class
+    - Public: Can access from any part of program
+
+- C++ Dev Environment Phases
+  - 1. Editor: e.g. VSCode
+    2. Preprocessor: process the code
+    3. Loader: load the program in memory
+    4. CPU: each instruction executed and storing new data from the program
+
+- Order of precedence (all left to right except =)
+  - () * / % + - << >> < <= > >= == != =
+
+- Constructors
+  - Implicit vs Explicit
+  - ????
