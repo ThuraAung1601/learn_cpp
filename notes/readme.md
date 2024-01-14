@@ -66,4 +66,18 @@
   - Testing: Validating program correctness
   - Debugging: Finding error source
 
+  ### cout and cin
+  ```
+  #include <iostream>
+  using namespace std;
+
+  int main() {
+    string name; int age;
+    cout << "Enter your name: "; cin >> name;
+    cout << "Enter your age: "; cin >> age;
+    cout << name << " is " << age << " years old." << endl;
+    return 0;
+  }
+  ```
+
 ## Lecture 2 Introduction
