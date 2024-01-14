@@ -30,6 +30,14 @@ Lecturer: Phairoj Jatanachai, B.Eng (Computer Engineering), M.B.A.
     - Overriding existing methods of existing classes.
     - To allow a single function or method to work in different ways depending on the object it is called on.)
 
+- Encapsulation and Polymorphism example
+  
+    ```
+      Circle c1; Rectangle r1;
+      cout << c1.Area() << endl;
+      cout << r1.Area() << endl;
+    ```
+
 - Why OOP ?
   - Limitation of procedural languages
     - Division into functions: grouping number of functions => large programs
