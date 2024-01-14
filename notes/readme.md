@@ -1,8 +1,8 @@
 ## Table of Content
-- [Lecture 1](#Lecture-1-Introduction-to-C++)
-- [Lecture 2](#Lecture-2-Introduction-to-C++)
+- [Lecture 1](#Lecture-1-Introduction)
+- [Lecture 2](#Lecture-2-Introduction)
 
-## Lecture 1 Introduction to C++
+## Lecture 1 Introduction
 
 ### Why C++
 - Performance
@@ -66,4 +66,4 @@
   - Testing: Validating program correctness
   - Debugging: Finding error source
 
-## Lecture 2 Introduction to C++
+## Lecture 2 Introduction
