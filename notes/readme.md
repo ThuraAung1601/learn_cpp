@@ -1,5 +1,6 @@
 Lecture notes on the book "C++ How to Program, 10th Edition by Paul Deitel and Harvey Deitel".
-Lecturer: Phairoj Jatanachai
+
+Lecturer: Phairoj Jatanachai, B.Eng (Computer Engineering), M.B.A.
 
 ## Table of Content
 - [Lecture 1](#Lecture-1-Introduction)
