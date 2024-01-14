@@ -1,3 +1,6 @@
+Lecture notes on the book "C++ How to Program, 10th Edition by Paul Deitel and Harvey Deitel".
+Lecturer: Phairoj Jatanachai
+
 ## Table of Content
 - [Lecture 1](#Lecture-1-Introduction)
 - [Lecture 2](#Lecture-2-Cpp-Structure)
