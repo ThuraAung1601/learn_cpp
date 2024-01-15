@@ -231,6 +231,185 @@ Output is ...
   - Takes the bits in the expression and reuse them UNCONVERTED as a new type
   - Only works on reference and pointers
 
+### For Looping
+```
+  for (int i=0; i<5; i++) {
+  }
+  // looping a container or sequence 
+  // auto keyword can also be used
+  for (int i: v1) {
+  }
+```
+
+## Lecture 3 Intro to Class
+- Computer Organization
+  - Input Unit
+  - Output Unit
+  - Memory Unit
+  - ALU
+  - CPU
+  - Secondary storage unit
+
+- Programming languages
+  - Machine languages
+  - Assembly
+  - High-level
+  - Interpret and Compile languages
+
+- OOP
+  - Functions, member functions (methods in class)
+  - Class
+  - Attributes and data members (private, protected, public)
+    - Private: Only within class the attributes declared
+    - Protected: Only within and its child class
+    - Public: Can access from any part of program
+
+C++ Dev Environment Phases
+    1. Editor: e.g. VSCode
+    2. Preprocessor: process the code
+    3. Loader: load the program in memory
+    4. CPU: each instruction executed and storing new data from the program
+
+- Order of precedence (all left to right except =)
+  - () * / % + - << >> < <= > >= == != =
+
+Constructors
+- Special type of function in a class that is automatically called when an object of
+  that class is created.
+- Purpose:
+  - To initialize the object's properties
+  - Setting up initial states or Performing any setup steps necessary
+- Implicit vs Explicit
+    - Implicit: default constructor
+    - Explicit: prevent implicit conversions for classes for safety
+    - 
+```
+class ExplicitExample {
+public:
+    explicit ExplicitExample(int value);
+};
+
+int main() {
+    // without explicit, both ways are valid to initialize
+
+    // Copy initialization
+    ExplicitExample obj1 = 42; // Error: Cannot implicitly convert int to ExplicitExample
+
+    // Direct initialization
+    ExplicitExample obj2(42);  // OK: Explicit conversion
+    return 0;
+}
+```
+
+### Lecture 4 Containers
+
+### Lecture 5 Classes and Control
+
+```
+// implicit constructor by default
+class Account1 {
+    private:
+        string name;
+    public:
+        // created automatically by compiler 
+        // - whether inside the code or not
+        // Account1() {
+
+        // }
+
+        void setName(string accountName) {
+            name = accountName;
+        }
+        // should put const to show compiler error in case the value in name is changed.
+        string getName() const {
+            return name;
+        }
+};
+
+// w/ explicit constructor
+class Account2 {
+    private:
+        string name;
+    public:
+        // constructors = function same name with the class
+        // explicitly defined constructor
+        explicit Account2(string accountName) : name(accountName) {
+
+        }
+    void setName(string accountName) {
+        name = accountName;
+    }
+    // should put const to show compiler error in case the value in name is changed.
+    string getName() const {
+        return name;
+    }
+};
+
+// w/ data validation
+class Account3 {
+    private:
+        string name; int balance;
+    public:
+        // constructors = function same name with the class
+        // explicitly defined constructor
+        explicit Account3(string accountName, int initialBalance) : name(accountName) {
+            // setting default to zero if less than 0
+            if (initialBalance > 0) {
+                balance = initialBalance;
+            }
+        }
+        void setName(string accountName) {
+            name = accountName;
+        }
+        // should put const to show compiler error in case the value in name is changed.
+        string getName() const {
+            return name;
+        }
+
+        void setBalance(int initialBalance) {
+            balance = initialBalance;
+        }
+        // should NOT put const to show compiler error in case the value in name is changed.
+        int getBalance() {
+            return balance;
+        }
+};
+```
+
+```
+Account1 myAccount;
+
+    myAccount.setName("John");
+    cout << myAccount.getName() << endl;
+
+    // cout << "Enter your name: ";
+    // string theName;
+    // getline(cin, theName);
+    // cout << "The name is " << theName << endl;
+
+    // myAccount.setName(theName);
+    // cout << "The name to myAccount object is " << myAccount.getName() << endl;
+
+    // ----------------- w/ explicit constructor 
+
+    Account2 myAccount2("Alex");
+    // reset the name in myAccount2
+    // myAccount2.setName("Athena");
+    cout << myAccount2.getName() << endl;
+
+    // ----------------- w/ data validation 
+
+    Account3 myAccount3("Alex", 100);
+    cout << myAccount3.getName() << endl;
+    cout << myAccount3.getBalance() << endl;
+
+    Account3 myAccount4("Alex", -1);
+    cout << myAccount4.getName() << endl;
+    cout << myAccount4.getBalance() << endl;
+```
+
+### Lecture 6 Control, recursion and enum
+
 ### Functions
 - Pass by value: new variable, arguments are copied when used in function
 - Pass by reference:
@@ -303,16 +482,6 @@ void swap3(int *n1, int *n2) {
     // 20
 ```
 
-### For Looping
-```
-  for (int i=0; i<5; i++) {
-  }
-  // looping a container or sequence 
-  // auto keyword can also be used
-  for (int i: v1) {
-  }
-```
-
 ### Generic Function
 - template /<typename T/>
 ```
@@ -367,39 +536,3 @@ void swap3(int *n1, int *n2) {
         return (ptr[0] > max) ? ptr[0] : max;
     }
 ```
-
-## Lecture 3 Intro to Class
-- Computer Organization
-  - Input Unit
-  - Output Unit
-  - Memory Unit
-  - ALU
-  - CPU
-  - Secondary storage unit
-
-- Programming languages
-  - Machine languages
-  - Assembly
-  - High-level
-  - Interpret and Compile languages
-
-- OOP
-  - Functions, member functions (methods in class)
-  - Class
-  - Attributes and data members (private, protected, public)
-    - Private: Only within class the attributes declared
-    - Protected: Only within and its child class
-    - Public: Can access from any part of program
-
-- C++ Dev Environment Phases
-  - 1. Editor: e.g. VSCode
-    2. Preprocessor: process the code
-    3. Loader: load the program in memory
-    4. CPU: each instruction executed and storing new data from the program
-
-- Order of precedence (all left to right except =)
-  - () * / % + - << >> < <= > >= == != =
-
-- Constructors
-  - Implicit vs Explicit
-  - ????
