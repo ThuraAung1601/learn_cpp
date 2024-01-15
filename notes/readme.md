@@ -313,6 +313,61 @@ void swap3(int *n1, int *n2) {
   }
 ```
 
+### Generic Function
+- template /<typename T/>
+```
+    template <typename T>
+    void swap4(T& a, T& b) {
+        T temp;
+        temp = a;
+        a = b;
+        b = a;
+    }
+  // pass by reference with Generic
+    int n7 = 10; int n8 = 20;
+    cout << n7 << '\t' << n8 << endl;
+    swap3(&n7, &n8);
+    cout << n7 << '\t' << n8 << endl;
+```
+
+### Recursion with Pointers
+```
+    void printArray(int *ptr, size_t size) {
+        if (size == 0) {
+            cout << endl;
+            return;
+        }
+        cout << *ptr << " ";
+        // pointer is shifted to one position
+        printArray(ptr+1, size-1);
+    }
+    
+    void reverseArray(int *ptr, size_t size) {
+        if (size == 0) {
+            return;
+        }
+        reverseArray(ptr+1, size-1);
+        cout << *ptr << " ";
+    }
+    
+    void reverseVector(vector<int> vec, int size) {
+        if (size == 0) {
+            cout << vec[0] << endl;
+            return;
+        }
+        cout << vec[size] << " ";
+        reverseVector(vec, size-1);
+    }
+    
+    int maxFinder(int *ptr, size_t size) {
+        if (size == 1) {
+            return ptr[0];
+        }
+        int max = maxFinder(ptr+1, size-1);
+        return (ptr[0] > max) ? ptr[0] : max;
+    }
+```
+
 ## Lecture 3 Intro to Class
 - Computer Organization
   - Input Unit
