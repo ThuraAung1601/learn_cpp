@@ -5,7 +5,7 @@ Lecturer: Phairoj Jatanachai, B.Eng (Computer Engineering), M.B.A.
 ## Table of Content
 - [Lecture 1](#Lecture-1-Introduction)
 - [Lecture 2](#Lecture-2-Cpp-Structure)
-- [Lecture 3](#Lecture-3-Intro-to-Classes)
+- [Lecture 3](#Lecture-3-Intro-to-Class)
 - [Lecture 4](#Lecture-4-Containers)
 - [Lecture 5](#Lecture-5-Classes)
 - [Lecture 6](#Lecture-6-Functions-and-Control)
