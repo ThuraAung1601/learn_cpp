@@ -67,16 +67,16 @@ Lecturer: Phairoj Jatanachai, B.Eng (Computer Engineering), M.B.A.
 
   ### Two types of Errors
   Syntax Error
-  - Compile-time error
+  - aka Compile-time error
   - violating the C++ lang rules
   - fixing the syntax (from top to bottom)
 
   Logic Error
-  - Run-time error
+  - aka Run-time error
   - Program don't do what suppose to do
 
   Overflow Error
-  - Round-off error
+  - aka Round-off error
   - Computation result is outside of numeric range
 
   ### Fixing Errors
