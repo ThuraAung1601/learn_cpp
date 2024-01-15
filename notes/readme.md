@@ -87,12 +87,18 @@ Lecturer: Phairoj Jatanachai, B.Eng (Computer Engineering), M.B.A.
   ```
   #include <iostream>
   using namespace std;
-
+  
   int main() {
     string name; int age;
-    cout << "Enter your name: "; cin >> name;
+    cout << "Enter your name: "; getline(cin, name);
     cout << "Enter your age: "; cin >> age;
     cout << name << " is " << age << " years old." << endl;
+  
+    cin.ignore();
+  
+    string father_name;
+    cout << "What is your father's name: "; getline(cin, father_name);
+    cout << "Your father is " << father_name;
     return 0;
   }
   ```
