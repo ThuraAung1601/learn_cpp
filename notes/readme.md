@@ -5,6 +5,10 @@ Lecturer: Phairoj Jatanachai, B.Eng (Computer Engineering), M.B.A.
 ## Table of Content
 - [Lecture 1](#Lecture-1-Introduction)
 - [Lecture 2](#Lecture-2-Cpp-Structure)
+- [Lecture 3](#Lecture-3-Intro-to-Classes)
+- [Lecture 4](#Lecture-4-Containers)
+- [Lecture 5](#Lecture-5-Classes)
+- [Lecture 6](#Lecture-6-Functions-and-Control)
 
 ## Lecture 1 Introduction
 
@@ -303,7 +307,7 @@ int main() {
 
 ### Lecture 4 Containers
 
-### Lecture 5 Classes and Control
+### Lecture 5 Classes 
 
 ```
 // implicit constructor by default
@@ -408,7 +412,7 @@ Account1 myAccount;
     cout << myAccount4.getBalance() << endl;
 ```
 
-### Lecture 6 Control, recursion and enum
+### Lecture 6 Functions and Control
 
 ### Functions
 - Pass by value: new variable, arguments are copied when used in function
