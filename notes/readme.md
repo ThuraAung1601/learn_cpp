@@ -121,13 +121,13 @@ Lecturer: Phairoj Jatanachai, B.Eng (Computer Engineering), M.B.A.
   }
   ```
 
-- string: #include<string>
+- string: #include\<string\>
 // it will create 5 blank spaces by default
-- setw(5): #include<iomanip>
+- setw(5): #include\<iomanip\>
 // after this all will fill that * character
 - setfill('*')
 // setprecision(n): precision of n number
-- scientific: will show in scifi format
+- scientific: will show in scientific format
 
 ```
   cout << setw(5) << 123 << setw(10) << 456 << endl;
@@ -218,7 +218,7 @@ Output is ...
   2.24's integer is 2 and divided value is 1.12
 ```
 
-- static_cast<new type> ( expression ) (e.g static_cast<int> (3/2))
+- static_cast\<new type\> ( expression ) (e.g static_cast<int> (3/2))
   - Identifies a cast at compile time
 - dynamic_cast
   - Casting at runtime.
@@ -254,6 +254,32 @@ Output is ...
 | Ease of Use              | Easier syntax, often preferred for clarity. | Requires explicit dereferencing, which can be error-prone. |
 | Pointer Ownership        | No ownership semantics. | Ownership can be transferred or managed explicitly. |
 | Use in Arrays            | Cannot be used to iterate through an array. | Can be used with pointer arithmetic to iterate through an array. |
+
+```
+// pass by value: original value is copied
+void swap1(int n1, int n2) {
+    int temp;
+    temp = n1;
+    n1 = n2;
+    n2 = temp;
+}
+
+// pass by reference: original value is pointed
+void swap2(int &n1, int &n2) {
+    int temp;
+    temp = n1;
+    n1 = n2;
+    n2 = temp;
+}
+
+// pass by pointer: address of the original variable is given
+void swap3(int *n1, int *n2) {
+    int temp;
+    temp = *n1;
+    *n1 = *n2;
+    *n2 = temp;
+}
+```
 
 ### For Looping
 ```
