@@ -257,6 +257,7 @@ Output is ...
 
 ```
 // pass by value: original value is copied
+// original variables not swap
 void swap1(int n1, int n2) {
     int temp;
     temp = n1;
@@ -265,6 +266,7 @@ void swap1(int n1, int n2) {
 }
 
 // pass by reference: original value is pointed
+// original variables swap
 void swap2(int &n1, int &n2) {
     int temp;
     temp = n1;
@@ -273,12 +275,32 @@ void swap2(int &n1, int &n2) {
 }
 
 // pass by pointer: address of the original variable is given
+// original variables swap
 void swap3(int *n1, int *n2) {
     int temp;
     temp = *n1;
     *n1 = *n2;
     *n2 = temp;
 }
+```
+
+```
+    int arr[3] = {10, 20, 30};
+    cout << *arr << endl;
+    // pointer shifted by one position
+    cout << *(arr+1) << endl;
+
+    // invalid using ++ for shifting
+    // cout << *arr++ << endl;
+    
+    // cannot use for CONTAINTER classes like vector, array, list
+    // vector<int> vec = {10, 20, 30};
+    // array<int, 3> arr2 = {10, 20, 30};
+    // cout << *arr2 << endl;
+
+    // Output
+    // 10
+    // 20
 ```
 
 ### For Looping
