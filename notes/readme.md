@@ -493,7 +493,7 @@ void swap3(int *n1, int *n2) {
 ```
 
 ### Generic Function
-- template /<typename T/>
+- template \<typename T>
 ```
     template <typename T>
     void swap4(T& a, T& b) {
