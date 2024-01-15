@@ -17,6 +17,15 @@ Lecturer: Phairoj Jatanachai, B.Eng (Computer Engineering), M.B.A.
 - Control over system resources / low-level operations
 - Object Oriented Programming
 
+How to run
+- Compile 
+- Execute
+- Cpp file -> object file -> executable file
+```
+$ g++ -o -std=c++14 a.out a.cpp
+$ ./a.out
+```
+
 ### OOP
 - Object: an instance of a class
 - Benefit
