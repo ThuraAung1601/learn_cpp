@@ -12,7 +12,7 @@ int main() {
     cout << "Enter two strings for mystery1: ";
     cin >> string1 >> string2;
     mystery1(string1, string2);
-    cout << "Concatenated string: " << string1 << endl;
+    cout << string1 << endl;
 
     // Test Case 2: Check if substring
     cout << "Enter two strings for mystery2: ";
@@ -20,9 +20,9 @@ int main() {
     mystery2(string1, string2);
 
     // Test Case 3: Error case for mystery1
-    char errorString1[10] = "Hello";
-    char errorString2[15] = "World";
-    mystery1(errorString1, errorString2);
+    // char errorString1[10] = "Hello";
+    // char errorString2[15] = "World";
+    // mystery1(errorString1, errorString2);
 
     return 0;
 }
