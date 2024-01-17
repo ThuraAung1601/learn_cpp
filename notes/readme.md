@@ -321,7 +321,9 @@ int main() {
 ```
 
 ### Lecture 4 Containers
+Array vs Vector: https://hsf-training.github.io/hsf-training-cpp-webpage/03-arrays-and-vectors/index.html
 
+Vectors and Lists operations: https://coding-champ.com/tutorials/c-plus-plus/lists-and-vectors 
 ```
 #include<iostream>
 #include<vector>
@@ -391,6 +393,16 @@ int main() {
     return 0; 
 }
 ```
+
+Output
+```
+Original vector: 1 -2 3 2 4 5 
+Positive vector: 1 3 2 4 5 
+After pass by reference:1 3 2 4 5 
+Original list: 1 -2 3 2 4 5 
+Positive list: 1 3 2 4 5 
+```
+
 
 ### Lecture 5 Classes 
 
