@@ -9,6 +9,7 @@ Lecturer: Phairoj Jatanachai, B.Eng (Computer Engineering), M.B.A.
 - [Lecture 4](#Lecture-4-Containers)
 - [Lecture 5](#Lecture-5-Classes)
 - [Lecture 6](#Lecture-6-Functions-and-Control)
+- [Lecture 7](#Lecture-7-Pointers)
 
 ## Lecture 1 Introduction
 
