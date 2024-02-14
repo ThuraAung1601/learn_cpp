@@ -1,16 +1,3 @@
-
-Conversation opened. 2 messages. All messages read.
-
-Skip to content
-Using Gmail with screen readers
-in:sent 
-1 of 519
-c++ lab 11 final solution
-
-Thura Aung <thuraaung.ai.mdy@gmail.com>
-18:04 (2 minutes ago)
-to Sai, Ei, Nay, Eaint
-
 #include <iostream>
 #include <fstream>
 #include <string>
