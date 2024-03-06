@@ -16,6 +16,25 @@ std::string setPrecision(double value, int precision) {
     return result;
 }
 
+double findSqrt(double x)
+{
+    // for 0 and 1, the square roots are themselves
+    if (x < 2)
+        return x;
+ 
+    // considering the equation values
+    double y = x;
+    double z = (y + (x / y)) / 2;
+ 
+    // as we want to get upto 5 decimal digits, the absolute
+    // difference should not exceed 0.00001
+    while (fabs(y - z) >= 0.00001) {
+        y = z;
+        z = (y + (x / y)) / 2;
+    }
+    return z;
+}
+
 int main() {
     std::vector<double> numbers; // Create a vector to store numbers
 
@@ -70,7 +89,7 @@ int main() {
     for (double n : numbers) {
         variance += (n - mean) * (n - mean);
     }
-    double stddev = sqrt(variance / numbers.size());
+    double stddev = findSqrt(variance / numbers.size());
 
     // Find minimum and maximum
     double minimum = numbers[0];
