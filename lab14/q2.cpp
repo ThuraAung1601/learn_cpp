@@ -39,16 +39,30 @@ int main() {
     }
     double mean = sum / numbers.size();
 
-    // Calculate median
-    size_t size = numbers.size();
-    size_t middle = size / 2;
-    std::nth_element(numbers.begin(), numbers.begin() + middle, numbers.end());
+    // Calculate medium
     double median;
+    size_t size = numbers.size();
+
+    std::vector<double> sortedNumbers = numbers;
+
+    // Bubble sort implementation
+    for (size_t i = 0; i < size - 1; ++i) {
+        for (size_t j = 0; j < size - i - 1; ++j) {
+            if (sortedNumbers[j] > sortedNumbers[j + 1]) {
+                // Swap elements if they are in the wrong order
+                double temp = sortedNumbers[j];
+                sortedNumbers[j] = sortedNumbers[j + 1];
+                sortedNumbers[j + 1] = temp;
+            }
+        }
+    }
+
     if (size % 2 == 0) {
-        std::nth_element(numbers.begin(), numbers.begin() + middle - 1, numbers.end());
-        median = (numbers[middle - 1] + numbers[middle]) / 2.0;
+        // If the size of the vector is even, return the average of the two middle elements
+        median = (sortedNumbers[size / 2 - 1] + sortedNumbers[size / 2]) / 2.0;
     } else {
-        median = numbers[middle];
+        // If the size of the vector is odd, return the middle element directly
+        median = sortedNumbers[size / 2];
     }
 
     // Calculate standard deviation
