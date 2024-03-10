@@ -5,6 +5,21 @@ using namespace std;
 
 #define VAT 0.1
 
+template <class T>
+string setPrecision(T num, int precision) {
+    string result;
+    string value = to_string(num);
+    size_t position = value.find('.');
+    for (int i=1; i < (value.size()-(position+precision)); i++) {
+        int temp = value[position+precision+i] - '0';
+        if (temp >= 5) {
+            value[(position+precision+i)-1] += 1;
+        }
+    }
+    result = value.substr(0, position+precision+1);
+    return result;
+}
+
 class Item {
     protected:
         string name; double price;
@@ -103,6 +118,6 @@ int main() {
         totalPrice += I->getPrice();
     }
     totalPrice += totalPrice*VAT;
-    cout << "Total Price with VAT is " << totalPrice << endl; 
+    cout << "Total Price with VAT is " << setPrecision(totalPrice, 2) << endl; 
     return 0;
 }
