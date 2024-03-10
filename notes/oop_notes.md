@@ -244,3 +244,72 @@ int main()
 	return 0;
 }
 ```
+
+tempate specialization
+
+```
+#include <iostream>
+using namespace std;
+
+template <class T>
+class Div {
+    public:
+        Div (T x, T y) {
+            cout <<x / y<<endl;
+        }
+};
+
+//your code goes here
+template <> 
+class Div <string> {
+   public:
+        Div (string x, string y) {
+            cout << x.size() / y.size() << endl;
+        }
+};
+
+
+int main () {
+    string a, b;
+    cin >> a >> b;
+    int x, y;
+    cin >> x >> y;
+    
+    Div <string> d2(a, b);
+    Div <int> d1(x, y);
+    
+}
+```
+
+### Exception
+
+```
+int motherAge = 29;
+int sonAge = 36;
+if (sonAge > motherAge) {
+  throw "Wrong age values";
+}
+```
+
+```
+#include <iostream>
+using namespace std;
+
+int main() {
+   string name;
+   cin >> name;
+   int length = name.size();
+   try {
+      if (length < 4 || length > 20) {
+         throw length;
+      }
+      cout << "Valid";
+      
+   }
+   catch(int length) {
+      cout << "Invalid";
+   }
+   
+   return 0;
+}
+```
