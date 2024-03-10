@@ -161,3 +161,25 @@ int main() {
 }
 ```
 
+### abstract class 
+
+- override can only use to virtual functions
+- pure virtual function basically defines, that the derived classes will have that function defined on their own.
+- abstract class is a class with pure virtual function.
+- abstract class serves as a blueprint for other classes and may contain one or more abstract methods. 
+- cannot be initialised itself.
+
+### template
+```
+#include <iostream>
+using namespace std;
+
+template <class T, class U>
+T smaller(T a, U b) {
+  if (a > b) {
+    return b;
+  } else {
+    return a;
+  }
+}
+```
