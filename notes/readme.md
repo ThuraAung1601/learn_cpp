@@ -15,8 +15,6 @@ Lecturer: Phairoj Jatanachai, B.Eng (Computer Engineering), M.B.A.
 - [Lecture 10](#Lecture-10)
 - [Lecture 11](#Lecture-11)
 - [Lecture 12](#Lecture-12)
-- [Lecture 13](#Lecture-13)
-- [Lecture 14](#Lecture-14)
 
 ## Lecture 1 Introduction
 
