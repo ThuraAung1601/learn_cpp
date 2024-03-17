@@ -834,3 +834,27 @@ cout << "S1: " << s4.getAge() << endl;
 
 Composition
 - Using a class as a member of another class
+
+## Lecture 10
+
+Operator overloading unchanged
+- Precedence 
+- Associativity
+- Arity 
+
+Restrictions
+- No new operator
+- cannot alter fundamental types - int, char, etc.
+- + and += do not automatically shared the overloading
+- -> () [] = must be declared as member of the class.
+
+See the code: https://github.com/ThuraAung1601/learn_cpp/tree/main/notes/practise_for_final/complex.cpp
+
+Dynamic memory management
+```
+int* ptr = new int;
+int* arr = new int[10];
+
+delete ptr;
+delete[] arr;
+```
