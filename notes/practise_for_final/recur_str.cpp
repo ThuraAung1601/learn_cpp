@@ -34,6 +34,16 @@ bool is_substr(string input, string sub) {
     return is_substr(input.substr(1), sub);
 }
 
+// decimal to binary
+string binary_converter(int num, string result="0") {
+    if (num == 0) {
+        return result;
+    }
+    int dividend = num / 2;
+    int reminder = num % 2;
+    return binary_converter(dividend, result + to_string(reminder));
+}
+
 int main() {
     string test = "software";
     cout << reverse_str(test) << endl;
