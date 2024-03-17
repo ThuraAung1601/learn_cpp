@@ -856,3 +856,55 @@ int* arr = new int[10];
 delete ptr;
 delete[] arr;
 ```
+
+## Lecture 11
+
+```
+    // ios::app is to append the existing text file
+    ofstream myFile("check_out_list.txt", ios::app);
+    if (myFile.is_open()) {  // if(!myFile.fail())
+        for(CheckOut i: checkout_list) {
+            myFile << i << endl;
+        }
+    } else {
+        cerr << "Error:: File cannot opened";
+        exit(1);
+    };
+
+    if (myFile.is_open()) {  // if(!myFile.fail())
+        myFile << no1 << endl;
+    } else {
+        cerr << "Error:: File cannot opened";
+        exit(1);
+    };
+
+    myFile.close();
+
+    // read from the file
+    ifstream myFile1("check_out_list.txt");
+    string line;
+    while (getline(myFile1, line)) {
+        cout << line << endl;
+    }
+    myFile1.close();
+```
+
+## Lecture 12
+Polymorphism
+
+See the code: https://github.com/ThuraAung1601/learn_cpp/blob/main/notes/practise_for_final/practise_q3.cpp
+
+Runtime polymorphism
+```
+// Create objects of Circle and Rectangle
+Circle circle(5);
+Rectangle rectangle(4, 6);
+
+// Pointer to the base class
+Shape* shape1 = &circle;
+Shape* shape2 = &rectangle;
+
+// Calculate and print areas using runtime polymorphism
+std::cout << "Area of Circle: " << shape1->area() << std::endl;
+std::cout << "Area of Rectangle: " << shape2->area() << std::endl;
+```
