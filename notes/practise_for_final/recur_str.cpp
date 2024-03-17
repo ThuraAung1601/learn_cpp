@@ -34,14 +34,6 @@ bool is_substr(string input, string sub) {
     return is_substr(input.substr(1), sub);
 }
 
-// double evaluate(string input) {
-//     if (input.size() == 0) {
-//         return 0;
-//     }
-//     cout << input.substr(input.find('(')+1, input.find(')')+1);
-//     return 0;
-// }
-
 int main() {
     string test = "software";
     cout << reverse_str(test) << endl;
