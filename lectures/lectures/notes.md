@@ -1,3 +1,14 @@
+```
+cout << "Please enter string: ";
+cin.getline(string1, sizeof(string1));
+if (cin.fail()) {
+    cin.clear();
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cerr << "Input exceeded maximum length." << endl;
+    return 1;
+}
+```
+
 ## Lecture 7
 
 - random numbers
